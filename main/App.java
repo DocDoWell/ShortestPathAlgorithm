@@ -38,9 +38,11 @@ public class App {
 
         Algorithm algorithm = new Algorithm(graph);
         algorithm.compute();
+        Vertex sink = v5;
 
-        for(Vertex v : graph){
-            System.out.println("Distance from s: "+ v.getMinDistance() + " - " + v.getPredecessor());
+        while(sink != null){
+            System.out.println(sink + " ---" + sink.getMinDistance() + "--> " + sink.getPredecessor());
+            sink = sink.getPredecessor();
         }
     }
 

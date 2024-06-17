@@ -58,6 +58,6 @@ public class Vertex {
 
     @Override
     public String toString() {
-        return name + "-" + predecessor;
+        return name;
     }
 }
